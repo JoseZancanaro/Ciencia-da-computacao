@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/cliente/listener/ClienteListener.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/comunicacao/deserializador/Deserializador.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/comunicacao/serializador/Serializador.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/cliente/listener/ClienteListenerAdapter.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/comunicacao/Protocolo.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/assets/Postagem.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/assets/Usuario.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/assets/RedeFuzzy.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/assets/ImagemFuzzy.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/servidor/listener/ServidorListener.java</file>
+            <file>file:/home/efraim/Documents/CC/fuzzy.me/FuzzyCore/src/fuzzy/model/servidor/listener/ServidorListenerAdapter.java</file>
+        </group>
+    </open-files>
+</project-private>

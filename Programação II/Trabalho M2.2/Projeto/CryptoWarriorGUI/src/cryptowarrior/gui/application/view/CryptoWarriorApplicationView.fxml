@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="parentNode" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="75.0" style="-fx-background-color: #171B27;" stylesheets="@assets/style/style.css">
+               <children>
+                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="imgLogo" fitHeight="100.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/image/logo-improved-64.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="bSetHomeView" alignment="CENTER" prefHeight="55.0" prefWidth="200.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="42" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_menu_lateral" />
+                        <String fx:value="cursor_link" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="bSetEncryptionView" alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="55.0" prefWidth="200.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="42" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_menu_lateral" />
+                        <String fx:value="cursor_link" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="bSetDecryptionView" alignment="CENTER" layoutX="10.0" layoutY="175.0" prefHeight="55.0" prefWidth="200.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="KEY" size="35" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_menu_lateral" />
+                        <String fx:value="cursor_link" />
+                     </styleClass>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #A2A3A5;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+</BorderPane>

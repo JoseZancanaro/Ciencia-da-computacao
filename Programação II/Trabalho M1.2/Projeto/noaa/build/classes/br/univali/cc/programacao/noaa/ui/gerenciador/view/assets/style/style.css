@@ -1,0 +1,10 @@
+.hover_menu_lateral:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #355b9e;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-border-color: #7ca6ef;
+}
+
+.cursor_link {
+    -fx-cursor:hand;
+}

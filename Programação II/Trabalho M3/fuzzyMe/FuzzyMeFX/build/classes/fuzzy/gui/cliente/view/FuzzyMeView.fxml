@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox maxHeight="-Infinity" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox minHeight="-Infinity" prefWidth="900.0" style="-fx-background-color: #2D2D2D;">
+               <children>
+                  <VBox alignment="CENTER" prefWidth="169.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label text="Fuzzy.Me" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Sans Regular" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="35.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="384.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="35.0" />
+                     </padding>
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="nome" text="Usuario" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Sans Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT">
+                           <children>
+                              <ImageView fx:id="avatar" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children></HBox>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <HBox style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <HBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXButton focusTraversable="false" prefHeight="30.0" prefWidth="98.0" text="Início">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="btSair" focusTraversable="false" prefHeight="30.0" prefWidth="98.0" text="Sair">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children></HBox>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="2.0" style="-fx-background-color: #E5E5E5;" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
