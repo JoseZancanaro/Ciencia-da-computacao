@@ -14,3 +14,4 @@ Ciência da Computação na Universidade do Vale do Itajaí - UNIVALI.
 * 4º Semestre - Programação II
 * 4º Semestre - Cálculo Numérico
 * 4º Semestre - Arquitetura e Organização de Computadores II
+* 5º Semestre - Engenharia de Software
