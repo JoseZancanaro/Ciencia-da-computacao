@@ -6,4 +6,6 @@
 
 ### Ambiente
 
-* QtCreator
+* Netbeans
+* JavaFX
+* Scene Builder
