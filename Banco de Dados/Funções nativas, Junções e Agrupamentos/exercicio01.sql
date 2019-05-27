@@ -45,29 +45,29 @@ REFERENCES colaborador (id);
 -- Popular tabelas:
 INSERT INTO cargo (id, nome, salario_por_hora)
 VALUES	(1, 'cargo01', 10),
-		(2, 'cargo02', 11),
-		(3, 'cargo03', 12);
+	(2, 'cargo02', 11),
+	(3, 'cargo03', 12);
 
 INSERT INTO colaborador (id, nome, data_nascimento, cargo_id)
 VALUES	(1, 'colaborador01', '2000-01-01', 1),
-		(2, 'colaborador02', '2000-02-02', 1),
-		(3, 'colaborador03', '2000-03-03', 2),
-		(4, 'colaborador04', '2000-04-04', 2),
-		(5, 'colaborador05', '2000-05-05', 3),
-		(6, 'colaborador06', '2000-06-06', 3);
+	(2, 'colaborador02', '2000-02-02', 1),
+	(3, 'colaborador03', '2000-03-03', 2),
+	(4, 'colaborador04', '2000-04-04', 2),
+	(5, 'colaborador05', '2000-05-05', 3),
+	(6, 'colaborador06', '2000-06-06', 3);
 
 INSERT INTO projeto (id, nome, concluido)
 VALUES	(1, 'projeto01', false),
-		(2, 'projeto02', false),
-		(3, 'projeto03', false);
+	(2, 'projeto02', false),
+	(3, 'projeto03', false);
 
 INSERT INTO tarefa (id, descricao, tempo_estimado, tempo_reportado, concluida, projeto_id, colaborador_id)
 VALUES	(1, 'tarefa01', 15, 16, false, 1, 1),
-		(2, 'tarefa02', 16, 17, false, 1, 2),
-		(3, 'tarefa03', 17, 18, false, 2, 3),
-		(4, 'tarefa04', 18, 19, false, 2, 4),
-		(5, 'tarefa05', 19, 20, false, 3, 5),
-		(6, 'tarefa06', 20, 21, false, 3, 6);
+	(2, 'tarefa02', 16, 17, false, 1, 2),
+	(3, 'tarefa03', 17, 18, false, 2, 3),
+	(4, 'tarefa04', 18, 19, false, 2, 4),
+	(5, 'tarefa05', 19, 20, false, 3, 5),
+	(6, 'tarefa06', 20, 21, false, 3, 6);
 
 -- Respostas:
 -- 1
@@ -104,23 +104,23 @@ FROM projeto
 INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id);
 
 -- 8
-SELECT 	projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-		colaborador.nome AS colaborador_responsavel
+SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+       colaborador.nome AS colaborador_responsavel
 FROM projeto
 INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id);
 
 -- 9
-SELECT 	projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-	   	colaborador.nome AS colaborador_responsavel, cargo.nome AS cargo_coloborador
+SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+       colaborador.nome AS colaborador_responsavel, cargo.nome AS cargo_coloborador
 FROM projeto
 INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
 INNER JOIN cargo ON (colaborador.cargo_id = cargo.id);
 
 -- 10
-SELECT 	projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-	   	tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
+SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+       tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
 FROM projeto
 INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
@@ -128,9 +128,9 @@ INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
 WHERE tarefa.concluida = true;
 
 -- 11
-SELECT 	projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-	   	tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
- 	   	tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
+SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+       tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
+       tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
 FROM projeto
 INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
@@ -138,10 +138,10 @@ INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
 WHERE tarefa.concluida = true;
 
 -- 12
-SELECT 	projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-	   	tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real,
-	   	tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
-	   	(tarefa.tempo_estimado - tarefa.tempo_reportado) * cargo.salario_por_hora AS diferenca_custos
+SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+       tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real,
+       tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
+       (tarefa.tempo_estimado - tarefa.tempo_reportado) * cargo.salario_por_hora AS diferenca_custos
 FROM projeto
 INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
@@ -196,8 +196,8 @@ LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 GROUP BY projeto.nome;
 
 -- 20
-SELECT 	projeto.nome AS nome_projeto,
-       	sum(tarefa.tempo_estimado * cargo.salario_por_hora) AS custo_estimado_por_projeto
+SELECT projeto.nome AS nome_projeto,
+       sum(tarefa.tempo_estimado * cargo.salario_por_hora) AS custo_estimado_por_projeto
 FROM projeto
 LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 LEFT OUTER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
