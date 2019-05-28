@@ -25,7 +25,7 @@ CREATE TABLE tarefa (
 	id int NOT NULL,
 	descricao text NOT NULL,
 	tempo_estimado numeric NOT NULL,
-	tempo_reportado numerIC NULL,
+	tempo_reportado numeric NULL,
 	concluida boolean NOT NULL,
 	projeto_id int NOT NULL,
 	colaborador_id int NOT NULL,
@@ -99,107 +99,135 @@ SELECT avg(tempo_estimado) AS media_tempo_estimado
 FROM tarefa;
 
 -- 7
-SELECT projeto.nome AS nome_projeto, tarefa.descricao as tarefa_relacionada
-FROM projeto
-INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id);
+SELECT 	
+  projeto.nome AS nome_projeto, tarefa.descricao as tarefa_relacionada
+FROM 
+  projeto
+  INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id);
 
 -- 8
-SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-       colaborador.nome AS colaborador_responsavel
-FROM projeto
-INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
-INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id);
+SELECT 	
+  projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+  colaborador.nome AS colaborador_responsavel
+FROM 	
+  projeto
+  INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+  INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id);
 
 -- 9
-SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-       colaborador.nome AS colaborador_responsavel, cargo.nome AS cargo_coloborador
-FROM projeto
-INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
-INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
-INNER JOIN cargo ON (colaborador.cargo_id = cargo.id);
+SELECT 
+  projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+  colaborador.nome AS colaborador_responsavel, cargo.nome AS cargo_coloborador
+FROM 
+  projeto
+  INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+  INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
+  INNER JOIN cargo ON (colaborador.cargo_id = cargo.id);
 
 -- 10
-SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-       tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
-FROM projeto
-INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
-INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
-INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
+SELECT 
+  projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+  tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
+FROM 
+  projeto
+  INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+  INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
+  INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
 WHERE tarefa.concluida = true;
 
 -- 11
-SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-       tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
-       tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
-FROM projeto
-INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
-INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
-INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
+SELECT 
+  projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+  tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
+  tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real
+FROM 
+  projeto
+  INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+  INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
+  INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
 WHERE tarefa.concluida = true;
 
 -- 12
-SELECT projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
-       tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real,
-       tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
-       (tarefa.tempo_estimado - tarefa.tempo_reportado) * cargo.salario_por_hora AS diferenca_custos
-FROM projeto
-INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
-INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
-INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
+SELECT 
+  projeto.nome AS nome_projeto, tarefa.descricao AS descricao_tarefa,
+  tarefa.tempo_reportado * cargo.salario_por_hora AS custo_real,
+  tarefa.tempo_estimado * cargo.salario_por_hora AS custo_estimado,
+  (tarefa.tempo_estimado - tarefa.tempo_reportado) * cargo.salario_por_hora AS diferenca_custos
+FROM 
+  projeto
+  INNER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+  INNER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
+  INNER JOIN cargo ON (colaborador.cargo_id = cargo.id)
 WHERE tarefa.concluida = true;
 
 -- 13
-SELECT projeto.nome AS nome_projeto, count(tarefa.projeto_id) AS qtd_tarefas_por_projetos
-FROM projeto
-LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+SELECT 
+  projeto.nome AS nome_projeto, count(tarefa.projeto_id) AS qtd_tarefas_por_projetos
+FROM 
+  projeto
+  LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 GROUP BY projeto.nome;
 
 -- 14
-SELECT cargo.nome AS nome_cargo, count(colaborador.cargo_id) AS qtd_colaborador_por_cargo
-FROM cargo
-RIGHT OUTER JOIN colaborador ON (cargo.id = colaborador.cargo_id)
+SELECT 
+  cargo.nome AS nome_cargo, count(colaborador.cargo_id) AS qtd_colaborador_por_cargo
+FROM 
+  cargo
+  RIGHT OUTER JOIN colaborador ON (cargo.id = colaborador.cargo_id)
 GROUP BY cargo.nome;
 
 -- 15 
-SELECT projeto.nome AS nome_projeto, sum(tarefa.tempo_reportado) AS tempo_gasto_pro_projeto
-FROM projeto
-LEFT JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+SELECT 
+  projeto.nome AS nome_projeto, sum(tarefa.tempo_reportado) AS tempo_gasto_pro_projeto
+FROM 
+  projeto
+  LEFT JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 GROUP BY projeto.nome;
 
--- 16
-SELECT colaborador.nome AS nome_colaborador, count(tarefa.concluida) AS qtd_tarefas_concluidas
-FROM colaborador
-LEFT OUTER JOIN tarefa ON (colaborador.id = tarefa.colaborador_id)
+--16
+SELECT 
+  colaborador.nome AS nome_colaborador, count(tarefa.concluida) AS qtd_tarefas_concluidas
+FROM 
+  colaborador
+  LEFT OUTER JOIN tarefa ON (colaborador.id = tarefa.colaborador_id)
 WHERE tarefa.concluida = true
 GROUP BY colaborador.nome
 ORDER BY colaborador.nome;
 
 -- 17
-SELECT colaborador.nome AS nome_colaborador, count(tarefa.concluida) AS qtd_tarefas_necessarias
-FROM colaborador
-LEFT outer JOIN tarefa ON (colaborador.id = tarefa.colaborador_id)
+SELECT 
+  colaborador.nome AS nome_colaborador, count(tarefa.concluida) AS qtd_tarefas_necessarias
+FROM 
+  colaborador
+  LEFT outer JOIN tarefa ON (colaborador.id = tarefa.colaborador_id)
 WHERE tarefa.concluida = false
 GROUP BY colaborador.nome
 ORDER BY colaborador.nome;
 
 -- 18
-SELECT colaborador.nome AS nome_colaborador, sum(tarefa.tempo_reportado) AS tempo_trabalhado
-FROM colaborador
-INNER JOIN tarefa ON (colaborador.id = tarefa.colaborador_id)
+SELECT 
+  colaborador.nome AS nome_colaborador, sum(tarefa.tempo_reportado) AS tempo_trabalhado
+FROM 
+  colaborador
+  INNER JOIN tarefa ON (colaborador.id = tarefa.colaborador_id)
 GROUP BY colaborador.nome
 ORDER BY colaborador.nome;
 
 -- 19
-SELECT projeto.nome AS nome_projeto, sum(tarefa.tempo_estimado) AS tempo_estimado_de_conclusao
-FROM projeto
-LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+SELECT 
+  projeto.nome AS nome_projeto, sum(tarefa.tempo_estimado) AS tempo_estimado_de_conclusao
+FROM 
+  projeto
+  LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
 GROUP BY projeto.nome;
 
 -- 20
-SELECT projeto.nome AS nome_projeto,
-       sum(tarefa.tempo_estimado * cargo.salario_por_hora) AS custo_estimado_por_projeto
-FROM projeto
-LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
-LEFT OUTER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
-LEFT OUTER JOIN cargo ON (colaborador.cargo_id = cargo.id)
+SELECT 
+  projeto.nome AS nome_projeto,
+  sum(tarefa.tempo_estimado * (cargo.salario_por_hora / 60)) AS custo_estimado_por_projeto
+FROM 
+  projeto
+  LEFT OUTER JOIN tarefa ON (projeto.id = tarefa.projeto_id)
+  LEFT OUTER JOIN colaborador ON (tarefa.colaborador_id = colaborador.id)
+  LEFT OUTER JOIN cargo ON (colaborador.cargo_id = cargo.id)
 GROUP BY projeto.nome;
