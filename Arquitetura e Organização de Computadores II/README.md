@@ -2,8 +2,8 @@
 
 ### Conteúdo
 
-* Experimento com paralelização - Eliminação Gaussiana com OpenMP. 
+- Experimento com paralelização - Eliminação Gaussiana com OpenMP.
 
 ### Ambiente
 
-* QtCreator
+- QtCreator

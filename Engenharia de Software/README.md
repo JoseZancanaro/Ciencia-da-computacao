@@ -2,10 +2,10 @@
 
 ### Conteúdo
 
-* MegaMath - Jogo de tabuleiro com expressões matemáticas, SCRUM 
+- MegaMath - Jogo de tabuleiro com expressões matemáticas, SCRUM
 
 ### Ambiente
 
-* Netbeans
-* JavaFX
-* Scene Builder
+- Netbeans
+- JavaFX
+- Scene Builder

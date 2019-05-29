@@ -2,9 +2,9 @@
 
 ### Conteúdos
 
-* Trabalho M1
-* Trabalho M2 
+- Trabalho M1
+- Trabalho M2
 
 ### Ambiente
 
-* MARS (MIPS Assembler and Runtime Simulator)
+- MARS (MIPS Assembler and Runtime Simulator)
