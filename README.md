@@ -16,3 +16,5 @@ Ciência da Computação na Universidade do Vale do Itajaí - UNIVALI.
 - **4º Semestre** - Programação II
 - **5º Semestre** - Banco de Dados
 - **5º Semestre** - Engenharia de Software
+
+Este repositório utiliza a licença MIT License. 
