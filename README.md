@@ -3,7 +3,10 @@
 ### O que é este repositório?
 
 Este repositório guarda implementações de algoritmos propostos no curso de
-Ciência da Computação na Universidade do Vale do Itajaí - UNIVALI.
+Ciência da Computação na Universidade do Vale do Itajaí - UNIVALI. O objetivo
+principal deste repositório é servir de auxílio para a compreensão das atividades/trabalhos
+elaborados ao longo do curso. Como descrito na [licença](LICENSE) MIT License, o autor deste repositório
+não responsabiliza-se por quaisquer reivindicações, danos ou outra responsabilidade.
 
 ### Conteúdos
 
@@ -16,5 +19,3 @@ Ciência da Computação na Universidade do Vale do Itajaí - UNIVALI.
 - **4º Semestre** - Programação II
 - **5º Semestre** - Banco de Dados
 - **5º Semestre** - Engenharia de Software
-
-Este repositório utiliza a licença MIT License. 
