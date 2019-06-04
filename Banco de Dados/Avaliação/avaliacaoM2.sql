@@ -10,31 +10,31 @@ ano_contratacao int NOT NULL CHECK (ano_contratacao > 2000);
 
 -- 2
 INSERT INTO projeto (id, nome, data_inicio, id_colaborador_gerente) 
-VALUES 	(1, 'Desenvolvimento do Site Coca-Cola', '13/11/2018', NULL),
-	    (2, 'Desenvolvimento Sistema UNIVALI', '01/10/2018', NULL),
-	    (3, 'Análise do Sistema Rede Globo', '23/05/2019', NULL),
-	    (4, 'Desenvolvimento do Sistema Block Buster', '20/03/2019', NULL);
+VALUES	(1, 'Desenvolvimento do Site Coca-Cola', '13/11/2018', NULL),
+	(2, 'Desenvolvimento Sistema UNIVALI', '01/10/2018', NULL),
+	(3, 'Análise do Sistema Rede Globo', '23/05/2019', NULL),
+ 	(4, 'Desenvolvimento do Sistema Block Buster', '20/03/2019', NULL);
 
 -- 3
 INSERT INTO cargo (id, nome, salario_hora) 
 VALUES 	(1, 'Programador Júnior', 18.00),
-	    (2, 'Programador Pleno', 30.00),
-	    (3, 'Programador Senior', 42.00),
-	    (4, 'Analista de Sistemas Pleno', 32.00),
-	    (5, 'Analista de Sistemas Senior', 44.00),
-	    (6, 'Administrador de DB Pleno', 31.00),
-	    (7, 'Administrador de DB Senior', 43.00);
+	(2, 'Programador Pleno', 30.00),
+        (3, 'Programador Senior', 42.00),
+	(4, 'Analista de Sistemas Pleno', 32.00),
+	(5, 'Analista de Sistemas Senior', 44.00),
+	(6, 'Administrador de DB Pleno', 31.00),
+	(7, 'Administrador de DB Senior', 43.00);
 
 -- 4
 INSERT INTO colaborador (id, id_cargo, nome, ano_contratacao) 
 VALUES 	(1, 2, 'João', 2017),
-		(2, 1, 'Pedro', 2015),
-		(3, 3, 'Ana', 2014),
-		(4, 1, 'Fernando', 2010),
-		(5, 2, 'Juliana', 2015),
-		(6, 5, 'Sérgio', 2014),
-		(7, 6, 'Alan', 2011),
-		(8, 3, 'Bruna', 2009);
+	(2, 1, 'Pedro', 2015),
+	(3, 3, 'Ana', 2014),
+	(4, 1, 'Fernando', 2010),
+	(5, 2, 'Juliana', 2015),
+	(6, 5, 'Sérgio', 2014),
+	(7, 6, 'Alan', 2011),
+	(8, 3, 'Bruna', 2009);
 
 -- 5
 INSERT INTO tarefa (id, id_colaborador_responsavel, id_projeto, descricao, duracao_hora, concluida) 
