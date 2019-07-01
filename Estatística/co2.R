@@ -1,10 +1,10 @@
-## Carregando a base de dados...
+## Carregando a base de dados co2.csv (disponível no meu one drive) 
 db <- read.table(file = "co2.csv", header = TRUE, sep = ";", dec = ",")
 
-## Instalando os pacotes...
+## Instalando os pacotes
 install.packages(c("ggplot2", "dplyr"), dependencies = TRUE) 
 
-## Carregando os pacotes...
+## Carregando os pacotes
 library(ggplot2)
 library(dplyr)
 
