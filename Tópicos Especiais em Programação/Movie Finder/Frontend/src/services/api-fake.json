@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Allan"
+    },
+    {
+      "id": 2,
+      "name": "José"
+    },
+    {
+      "id": 3,
+      "name": "Israel"
+    }
+  ],
+  "slideshow": [
+    {
+      "id": 1,
+      "title": "Vingadores: Ultimato",
+      "img": "https://i.postimg.cc/RF0zL1Tn/pre-bannerhome-shazam-desk.png",
+      "url": "/filmes/em-cartaz/vingadores-ultimato"
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Vingadores: Ultimato",
+      "poster": "https://i.postimg.cc/JhbR9MnT/fe478a9c4bd0b532d41719ecfe72d420.jpg",
+      "status": "released"
+    },
+    {
+      "id": 2,
+      "title": "Capitã Marvel",
+      "poster": "https://i.postimg.cc/JhbR9MnT/fe478a9c4bd0b532d41719ecfe72d420.jpg",
+      "status": "released"
+    },
+    {
+      "id": 3,
+      "title": "A cinco passos de você",
+      "poster": "https://i.postimg.cc/JhbR9MnT/fe478a9c4bd0b532d41719ecfe72d420.jpg",
+      "status": "released"
+    },
+    {
+      "id": 4,
+      "title": "Allandin",
+      "poster": "https://i.postimg.cc/JhbR9MnT/fe478a9c4bd0b532d41719ecfe72d420.jpg",
+      "status": "released"
+    },
+    {
+      "id": 5,
+      "title": "Cemitério Maldito",
+      "poster": "https://i.postimg.cc/JhbR9MnT/fe478a9c4bd0b532d41719ecfe72d420.jpg",
+      "status": "released"
+    },
+    {
+      "id": 6,
+      "title": "Zer0",
+      "poster": "https://i.postimg.cc/JhbR9MnT/fe478a9c4bd0b532d41719ecfe72d420.jpg",
+      "status": "released"
+    },
+    {
+      "id": 7,
+      "title": "Maya",
+      "poster": "https://i.postimg.cc/JhbR9MnT/fe478a9c4bd0b532d41719ecfe72d420.jpg",
+      "status": "released"
+    },
+    {
+      "id": 8,
+      "title": "Capitã Marvel",
+      "poster": "https://i.postimg.cc/Sskm43Ym/ff81e2887c4433510810de1b4cab9715.jpg",
+      "status": "released"
+    },
+    {
+      "id": 9,
+      "title": "A cinco passos de você",
+      "poster": "https://i.postimg.cc/Sskm43Ym/ff81e2887c4433510810de1b4cab9715.jpg",
+      "status": "comming-soon"
+    },
+    {
+      "id": 10,
+      "title": "A dez passos de você",
+      "poster": "https://i.postimg.cc/Sskm43Ym/ff81e2887c4433510810de1b4cab9715.jpg",
+      "status": "comming-soon"
+    },
+    {
+      "id": 11,
+      "title": "A muitos passos de você",
+      "poster": "https://i.postimg.cc/Sskm43Ym/ff81e2887c4433510810de1b4cab9715.jpg",
+      "status": "comming-soon"
+    },
+    {
+      "id": 12,
+      "title": "A muitos passos mesmo de você",
+      "poster": "https://i.postimg.cc/Sskm43Ym/ff81e2887c4433510810de1b4cab9715.jpg",
+      "status": "comming-soon"
+    },
+    {
+      "id": 13,
+      "title": "Bem longe mesmo de você",
+      "poster": "https://i.postimg.cc/Sskm43Ym/ff81e2887c4433510810de1b4cab9715.jpg",
+      "status": "comming-soon"
+    }
+  ]
+}

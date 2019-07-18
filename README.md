@@ -20,3 +20,4 @@ não responsabiliza-se por quaisquer reivindicações, danos ou outra responsabi
 - **5º Semestre** - Banco de Dados
 - **5º Semestre** - Engenharia de Software
 - **5º Semestre** - Estatística
+- **5º Semestre** - Tópicos Especiais em Programação

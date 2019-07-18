@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="theme-color" content="#890000" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="%PUBLIC_URL%/images/icons/icon-72x72.png" />
+
+    <title>Movie Finder</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/load.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Apple PWA Suport -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Movie Finder">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href="%PUBLIC_URL%/images/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/images/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="%PUBLIC_URL%/images/icons/icon-192x192.png" />
+
+  </head>
+  <body>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div class="ipl-progress-indicator" id="ipl-progress-indicator">
+      <div class="ipl-progress-indicator-head">
+        <div class="first-indicator"></div>
+        <div class="second-indicator"></div>
+      </div>
+      <div class="insp-logo-frame">
+        <img src="%PUBLIC_URL%/images/icons/icon-128x128.png" class="insp-logo-frame-img" />
+      </div>
+    </div>
+
+    <div id="app"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit-icons.min.js" defer></script>
+
+  </body>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      console.log("Will the service worker register?");
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(reg){
+          console.log("Yes, it did.");
+        }).catch(function(err) {
+          console.log("No it didn't. This happened: ", err)
+        });
+    }
+  </script>
+
+</html>
