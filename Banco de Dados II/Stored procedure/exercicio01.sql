@@ -15,4 +15,3 @@ $$
 LANGUAGE SQL;
 
 SELECT exercicio01(10,2);
-

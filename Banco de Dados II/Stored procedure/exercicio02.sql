@@ -41,6 +41,3 @@ SELECT calcular(11, 0, '/');
 -- Vários registros: RETURNS record + ter parametros OUT nome tipo
 -- Várias células RETURNS setof tipo
 -- RAISE NOTICE exibe mensagem no console.
-
-
-
