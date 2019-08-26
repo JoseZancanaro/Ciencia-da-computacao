@@ -29,10 +29,6 @@ $$
 DECLARE	
 	descricaoVento varchar(5) := '';
 BEGIN
-	IF angulo < 0 OR angulo > 360 THEN
-		RAISE EXCEPTION 'Angulo informado: % é menor que 0 ou maior que 360', angulo;
-	END IF;
-	
 	IF (angulo BETWEEN 315 AND 360) OR (angulo BETWEEN 0 and 45) THEN
 		descricaoVento := 'Norte';
 	ELSIF angulo BETWEEN 45 AND 135 THEN
@@ -41,6 +37,8 @@ BEGIN
 		descricaoVento := 'Sul';
 	ELSIF angulo BETWEEN 225 AND 315 THEN
 		descricaoVento := 'Oeste';
+	ELSE
+		RAISE EXCEPTION 'Angulo informado: % é menor que 0 ou maior que 360', angulo;
 	END IF;
 
 	RETURN descricaoVento;
