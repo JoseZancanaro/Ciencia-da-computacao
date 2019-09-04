@@ -47,7 +47,7 @@ $$
 LANGUAGE PLPGSQL;
 
 -- Exercício 04
-CREATE OR REPLACE FUNCTION incidenciarPorDirecaoDoVento_1() RETURNS SETOF varchar AS
+CREATE OR REPLACE FUNCTION incidenciaPorDirecaoDoVento_1() RETURNS SETOF varchar AS
 $$
 DECLARE
  	total int := COUNT(id) FROM CondicaoVento;
@@ -58,6 +58,28 @@ BEGIN
 		FROM CondicaoVento GROUP BY direcaoDescricaoVento(direcao::decimal)
 	LOOP
 		RETURN NEXT CONCAT(linhaAtual.direcao, ': ', ROUND(linhaAtual.qtdDirecao * 100 / total, 2), '%');
+	END LOOP;
+END;
+$$
+LANGUAGE PLPGSQL;
+
+-- Exercício 05
+CREATE TYPE vento AS (direcao varchar(5), percentual float);
+
+CREATE OR REPLACE FUNCTION incidenciaPorDirecaoDoVento_2() RETURNS SETOF vento AS
+$$
+DECLARE
+	retorno vento;
+ 	total int := COUNT(id) FROM CondicaoVento;
+ 	linhaAtual record;
+BEGIN
+	FOR linhaAtual IN 
+		SELECT direcaoDescricaoVento(direcao::decimal) AS direcao, COUNT(direcaoDescricaoVento(direcao::decimal)) AS qtdDirecao 
+		FROM CondicaoVento GROUP BY direcaoDescricaoVento(direcao::decimal)
+	LOOP
+		retorno.direcao := linhaAtual.direcao;
+		retorno.percentual := linhaAtual.qtdDirecao * 100 / total;
+		RETURN NEXT retorno;
 	END LOOP;
 END;
 $$
