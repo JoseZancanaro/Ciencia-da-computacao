@@ -61,9 +61,8 @@ BEGIN
 	END IF;
 
 	-- Verificar se pode inserir na tabela
-	IF (validarHorario(dataInicio::time, dataFim::time)) 
-		AND validarIntervalo(dataInicio, dataFim) THEN
-			
+	IF (validarHorario(dataInicio::time, dataFim::time) AND 
+	    validarIntervalo(dataInicio, dataFim)) THEN	
 		INSERT INTO agendamento (cliente, inicio, termino) VALUES (nomeCliente, dataInicio, dataFim);
 		RETURN TRUE;
 	END IF;
@@ -123,7 +122,7 @@ BEGIN
 			IF (primeiroDaTabela) AND (dataFinal::time <= linhaAtual.inicio::time) THEN
 				horarioVago := concat(linhaAtual.inicio::date, ' ', dataAtual::time);
 				RETURN horarioVago;
-			
+
 			ELSIF (NOT primeiroDaTabela) AND (intervalo <= linhaAtual.inicio) 
 			AND (validarHorario(terminoAnterior::time, linhaAtual.inicio::time)) THEN
 				horarioVago := concat(linhaAtual.inicio::date, ' ', terminoAnterior::time);
