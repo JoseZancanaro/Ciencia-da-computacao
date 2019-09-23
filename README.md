@@ -22,3 +22,4 @@ não responsabiliza-se por quaisquer reivindicações, danos ou outra responsabi
 - **5º Semestre** - Estatística
 - **5º Semestre** - Tópicos Especiais em Programação
 - **6º Semestre** - Banco de Dados II
+- **6º Semestre** - Simulação Discreta de Sistemas
