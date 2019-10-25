@@ -5,8 +5,7 @@
 Este repositório guarda implementações de algoritmos propostos no curso de
 Ciência da Computação na Universidade do Vale do Itajaí - UNIVALI. O objetivo
 principal deste repositório é servir de auxílio para a compreensão das atividades/trabalhos
-elaborados ao longo do curso. Como descrito na [licença](LICENSE) MIT License, o autor deste repositório
-não responsabiliza-se por quaisquer reivindicações, danos ou outra responsabilidade.
+elaborados ao longo do curso.
 
 ### Conteúdos
 
