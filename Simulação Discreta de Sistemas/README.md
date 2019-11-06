@@ -2,7 +2,7 @@
 
 ### Conteúdo
 
-- Random Distribution Generator
+- Coliseu - Simulador de fila simples
 
 ### Ambiente
 
