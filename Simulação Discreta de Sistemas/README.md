@@ -2,7 +2,7 @@
 
 ### Conteúdo
 
-- Coliseu - Simulador de fila simples
+- Random Distribution Generator QT Project - Coliseu -  Simulador de fila simples
 
 ### Ambiente
 
