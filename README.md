@@ -21,4 +21,5 @@ elaborados ao longo do curso.
 - **5º Semestre** - Estatística
 - **5º Semestre** - Tópicos Especiais em Programação
 - **6º Semestre** - Banco de Dados II
+- **6º Semestre** - Grafos
 - **6º Semestre** - Simulação Discreta de Sistemas
