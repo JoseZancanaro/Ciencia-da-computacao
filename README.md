@@ -23,3 +23,4 @@ elaborados ao longo do curso.
 - **6º Semestre** - Banco de Dados II
 - **6º Semestre** - Grafos
 - **6º Semestre** - Simulação Discreta de Sistemas
+- **7º Semestre** - Complexidade de Algoritmos
