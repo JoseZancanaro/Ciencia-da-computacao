@@ -25,3 +25,4 @@ elaborados ao longo do curso.
 - **6º Semestre** - Simulação discreta de sistemas
 - **7º Semestre** - Complexidade de algoritmos
 - **7º Semestre** - Engenharia de software 03
+- **7º Semestre** - Inteligência artificial

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1046</width>
+    <height>838</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="assets/main.qrc">
+    <normaloff>:/icons/steam.png</normaloff>:/icons/steam.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Developer</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Publisher</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Platform</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Required Age</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Resource</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Genre</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Tag</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Achievements</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Positive Rating</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Negative Rating</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Average Playtime</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>Owners</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>Price</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLineEdit" name="txtDeveloper"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtPublisher"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtPlatform"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtRequiredAge"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtResource"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtGenre"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtTag"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtAchievements"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtPositiveRating"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtNegativeRating"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtAveragePlaytime"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtOwners"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtPrice"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnInspect">
+          <property name="text">
+           <string>Inspect Base</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <column>
+       <property name="text">
+        <string>Similarity</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AppId</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Release Date</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Developer</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Platform</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Required Age</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Resource</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Genre</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Tag</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Achievements</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Positive Rating</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Negative Rating</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Average Playtime</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Owners</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Price</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1046</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Base"/>
+    <addaction name="actionReload"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_Base">
+   <property name="text">
+    <string>Open Base</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="text">
+    <string>Reload</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="assets/main.qrc"/>
+ </resources>
+ <connections/>
+</ui>
