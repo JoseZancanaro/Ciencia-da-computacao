@@ -1,28 +1,28 @@
-﻿# Ciência da Computação
+﻿# Computer science
 
-### O que é este repositório?
+### About this repository
 
-Este repositório guarda implementações de algoritmos propostos no curso de
-Ciência da Computação na Universidade do Vale do Itajaí - UNIVALI. O objetivo
-principal deste repositório é servir de auxílio para a compreensão das atividades/trabalhos
-elaborados ao longo do curso.
+This repository holds implementations of algorithms proposed in the course of
+Computer Science at the University of Vale do Itajaí - UNIVALI. The main purpose 
+of this repository is to help to understand the activities / tests
+elaborated throughout the course.
 
-### Conteúdos
+### Content
 
-- **2º Semestre** - Algoritmos e programação 02
-- **3º Semestre** - Arquitetura e organização de computadores
-- **3º Semestre** - Estrutura de dados
-- **3º Semestre** - Programação
-- **4º Semestre** - Arquitetura e organização de computadores 02
-- **4º Semestre** - Cálculo numérico
-- **4º Semestre** - Programação 02
-- **5º Semestre** - Banco de dados
-- **5º Semestre** - Engenharia de software
-- **5º Semestre** - Estatística
-- **5º Semestre** - Tópicos especiais em programação
-- **6º Semestre** - Banco de Dados 02
-- **6º Semestre** - Grafos
-- **6º Semestre** - Simulação discreta de sistemas
-- **7º Semestre** - Complexidade de algoritmos
-- **7º Semestre** - Engenharia de software 03
-- **7º Semestre** - Inteligência artificial
+- **2º Semester** - Algorithms and programming II
+- **3º Semester** - Computer architecture and organization
+- **3º Semester** - Data structure
+- **3º Semester** - Programming
+- **4º Semester** - Computer architecture and organization II
+- **4º Semester** - Numerical calculus
+- **4º Semester** - Programming II
+- **5º Semester** - Database
+- **5º Semester** - Software engineering
+- **5º Semester** - Statistic
+- **5º Semester** - Special topics in programming
+- **6º Semester** - Database II
+- **6º Semester** - Graphs theory
+- **6º Semester** - Discrete simulation
+- **7º Semester** - Algorithms complexity
+- **7º Semester** - Software engineering III
+- **7º Semester** - Artificial intelligence
