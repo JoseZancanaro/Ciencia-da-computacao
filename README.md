@@ -26,3 +26,4 @@ elaborated throughout the course.
 - **7º Semester** - Algorithms complexity
 - **7º Semester** - Software engineering III
 - **7º Semester** - Artificial intelligence
+- **8º Semester** - Artificial intelligence II
