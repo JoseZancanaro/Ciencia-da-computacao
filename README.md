@@ -27,3 +27,4 @@ elaborated throughout the course.
 - **7º Semester** - Software engineering III
 - **7º Semester** - Artificial intelligence
 - **8º Semester** - Artificial intelligence II
+- **8º Semester** - Distributed systems
