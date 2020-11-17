@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="200.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+        <StackPane fx:id="layers" prefHeight="150.0" prefWidth="200.0">
+            <children>
+                <ImageView fitHeight="512.0" fitWidth="512.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@assets/img/background/bg.jpg" />
+                    </image>
+                </ImageView>
+            <HBox fx:id="cntPlaceholder" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgb(0,0,0);" StackPane.alignment="CENTER">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="512.0" fitWidth="512.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                           <image>
+                              <Image url="@assets/img/scheme/bg.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                           <children>
+                              <Separator opacity="0.0" orientation="VERTICAL" prefHeight="280.0" visible="false" />
+                              <ProgressIndicator fx:id="indStartup" prefHeight="175.0" prefWidth="143.0" style="-fx-progress-color: rgb(241,89,34);" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="280.0" visible="false" />
+                              <JFXButton fx:id="btnStart" focusTraversable="false" ripplerFill="#f15922" text="START" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="Consolas Bold" size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            </children>
+        </StackPane>
+   </children>
+</VBox>
