@@ -21,7 +21,6 @@ elaborated throughout the course.
 - **5º Semester** - Statistic
 - **5º Semester** - Special topics in programming
 - **6º Semester** - Database II
-- **6º Semester** - Graphs theory
 - **6º Semester** - Discrete simulation
 - **7º Semester** - Algorithms complexity
 - **7º Semester** - Software engineering III
